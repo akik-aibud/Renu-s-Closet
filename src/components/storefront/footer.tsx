@@ -153,14 +153,26 @@ export function Footer() {
 
         <Separator className="my-8 bg-background/10" />
 
-        <div className="flex flex-col items-center justify-between gap-3 text-center sm:flex-row">
-          <p className="text-xs text-background/50">
-            &copy; {new Date().getFullYear()} Renu&apos;s Closet. All rights
-            reserved.
-          </p>
-          <p className="text-xs text-background/40">
-            Proudly Bangladeshi
-          </p>
+        {/* Payment Methods */}
+        <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
+          <div>
+            <p className="text-xs text-background/50 mb-2">We Accept</p>
+            <div className="flex items-center gap-3">
+              <span className="rounded bg-background/10 px-2 py-1 text-[10px] font-bold text-background/70">bKash</span>
+              <span className="rounded bg-background/10 px-2 py-1 text-[10px] font-bold text-background/70">Nagad</span>
+              <span className="rounded bg-background/10 px-2 py-1 text-[10px] font-bold text-background/70">COD</span>
+              <span className="rounded bg-background/10 px-2 py-1 text-[10px] font-bold text-background/70">Rocket</span>
+              <span className="rounded bg-background/10 px-2 py-1 text-[10px] font-bold text-background/70">Bank</span>
+            </div>
+          </div>
+          <div className="text-center sm:text-right">
+            <p className="text-xs text-background/50">
+              &copy; {new Date().getFullYear()} Renu&apos;s Closet. All rights reserved.
+            </p>
+            <p className="text-[10px] text-background/40 mt-0.5">
+              Proudly Bangladeshi
+            </p>
+          </div>
         </div>
       </div>
     </footer>
