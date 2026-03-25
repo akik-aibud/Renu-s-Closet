@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, MapPin, Mail } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -29,9 +30,13 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <h2 className="text-xl font-bold tracking-tight text-background">
-              Renu&apos;s Closet
-            </h2>
+            <Image
+              src="/images/logo.png"
+              alt="Renu's Closet"
+              width={140}
+              height={57}
+              className="h-10 w-auto brightness-0 invert"
+            />
             <p className="mt-3 text-sm leading-relaxed text-background/60">
               Premium Bangladeshi sarees and women&apos;s clothing. We bring you
               the finest Rajshahi, Muslin, and Silk sarees with authentic

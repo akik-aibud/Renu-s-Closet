@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import {
   Search,
   ShoppingBag,
@@ -122,12 +123,14 @@ export function Header() {
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col h-full">
                 <div className="border-b px-6 py-5">
-                  <Link
-                    href="/"
-                    onClick={() => setMobileOpen(false)}
-                    className="text-xl font-bold tracking-tight text-primary"
-                  >
-                    Renu&apos;s Closet
+                  <Link href="/" onClick={() => setMobileOpen(false)}>
+                    <Image
+                      src="/images/logo.png"
+                      alt="Renu's Closet"
+                      width={130}
+                      height={53}
+                      className="h-8 w-auto"
+                    />
                   </Link>
                 </div>
                 {/* Mobile Search */}
@@ -183,9 +186,14 @@ export function Header() {
 
           {/* Logo */}
           <Link href="/" className="shrink-0">
-            <span className="text-xl sm:text-2xl font-bold tracking-tight text-primary">
-              Renu&apos;s Closet
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Renu's Closet"
+              width={140}
+              height={57}
+              className="h-9 w-auto sm:h-10"
+              priority
+            />
           </Link>
 
           {/* Desktop Search Bar — prominent like Govaly */}
